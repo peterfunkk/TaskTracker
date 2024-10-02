@@ -28,6 +28,7 @@ class Task{
         console.log(`${colors.green}Task added successfully! (ID: ${newTask.id})${colors.reset}`);
     }
 
+
     updateTask(id, newDescription){
         const tasks = readTasks();
         const task = tasks.find((task) => task.id === parseInt(id));
@@ -41,7 +42,6 @@ class Task{
           }
     }
 }
-
 
 function readTasks() {
     if (fs.existsSync(tasksFilePath)) {
@@ -60,11 +60,4 @@ function getNextId(tasks) {
     return ids.length > 0 ? Math.max(...ids) + 1 : 1;
 }
 
-function addTask(description){
-    const tasks = readTasks();
-    const newTask = {
-        id: getNextId(tasks),
-        description: description,
-
-    }
-}
+/* xdd*/
